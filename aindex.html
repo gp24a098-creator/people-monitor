@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>人数モニター</title>
+
+<style>
+
+body{
+  background:#0f172a;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+  margin-top:100px;
+}
+
+.box{
+  width:300px;
+  margin:auto;
+  background:#1e293b;
+  padding:40px;
+  border-radius:20px;
+}
+
+#count{
+  font-size:120px;
+  color:#22c55e;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>AI 人数モニター</h1>
+
+<div class="box">
+
+<div>現在の人数</div>
+
+<div id="count">
+0
+</div>
+
+</div>
+
+<script>
+
+function updatePeople(){
+
+  let people = Math.floor(Math.random() * 10);
+
+  document.getElementById("count").innerText = people;
+}
+
+setInterval(updatePeople, 2000);
+
+</script>
+
+</body>
+</html>
